@@ -10,6 +10,9 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import {ReversePipe} from "./reverse.pipe";
 import { LoginComponent } from './login/login.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PostsComponent } from './posts/posts.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -17,16 +20,19 @@ import { PostsListComponent } from './posts-list/posts-list.component';
     AppComponent,
     ReversePipe,
     LoginComponent,
-    PostsListComponent
+    PostsListComponent,
+    PageNotFoundComponent,
+    PostsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NavbarComponent]
 })
 export class AppModule { }

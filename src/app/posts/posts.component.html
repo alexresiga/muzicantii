@@ -1,0 +1,4 @@
+<div *ngIf="afAuth.user | async as user">
+  <h1>Hello {{ user.displayName }}!</h1>
+</div>
+<app-posts-list></app-posts-list>
