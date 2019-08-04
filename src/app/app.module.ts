@@ -13,6 +13,8 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostsComponent } from './posts/posts.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSlideToggleModule} from "@angular/material";
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent, NavbarComponent]
