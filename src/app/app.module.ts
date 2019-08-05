@@ -15,6 +15,9 @@ import { PostsComponent } from './posts/posts.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSlideToggleModule} from "@angular/material";
+import { HttpClientModule } from '@angular/common/http';
+import {NgxSpinnerModule} from "ngx-spinner";
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import {MatSlideToggleModule} from "@angular/material";
     PostsListComponent,
     PageNotFoundComponent,
     PostsComponent,
-    NavbarComponent
+    NavbarComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,8 @@ import {MatSlideToggleModule} from "@angular/material";
     AngularFireAuthModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent, NavbarComponent]

@@ -16,7 +16,7 @@ export class PostsService {
 
   getPosts(): Observable<Post[]> {
     return this.database.list('/posts', ref => ref.orderByChild('date')
-      .limitToLast(10))
+      .limitToLast(100))
       .valueChanges()
       .pipe(catchError(this.handleError(undefined)));
   }

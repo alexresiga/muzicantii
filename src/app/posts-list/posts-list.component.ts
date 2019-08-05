@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PostsService} from "../shared/services/posts.service";
 import {Post} from "../shared/model/post";
+import {NgxSpinnerService} from "ngx-spinner";
 
 @Component({
   selector: 'app-posts-list',
@@ -9,12 +10,16 @@ import {Post} from "../shared/model/post";
 })
 export class PostsListComponent implements OnInit {
   posts: Post[];
-  constructor(private postService: PostsService) { }
+  constructor(private spinner: NgxSpinnerService, private postService: PostsService) { }
 
   getPosts():void {
-    this.postService.getPosts().subscribe(response => {this.posts = response; console.log(response)})
+    this.postService.getPosts().subscribe(response => {this.posts = response.reverse(); console.log(response)})
   }
   ngOnInit() {
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide()
+    }, 3000);
     this.getPosts();
   }
 
