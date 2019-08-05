@@ -6,6 +6,6 @@ export class Post {
   date: string;
   url: string;
   badge: string;
-  user_name: string;
+  username: string;
   user_link: string;
 }
