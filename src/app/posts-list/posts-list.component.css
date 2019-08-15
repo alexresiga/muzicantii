@@ -1,0 +1,10 @@
+.image-loaded {
+    min-height: 282px;
+    max-height: 316px;
+    width: 606px;
+}
+
+
+.card {
+    min-height: 428px;
+}

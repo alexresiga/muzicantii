@@ -18,6 +18,7 @@ import {MatSlideToggleModule} from "@angular/material";
 import { HttpClientModule } from '@angular/common/http';
 import {NgxSpinnerModule} from "ngx-spinner";
 import { TestComponent } from './test/test.component';
+import { ImageFallbackDirective } from './image-fallback.directive';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TestComponent } from './test/test.component';
     PageNotFoundComponent,
     PostsComponent,
     NavbarComponent,
-    TestComponent
+    TestComponent,
+    ImageFallbackDirective
   ],
   imports: [
     BrowserModule,
